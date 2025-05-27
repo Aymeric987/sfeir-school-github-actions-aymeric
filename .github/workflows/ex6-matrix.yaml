@@ -1,17 +1,21 @@
-name: npm test
+name: npm test with matrix
 on: 
   workflow_dispatch:
 
 jobs:
   run-npm-install:
-    runs-on: ubuntu-latest
+    strategy:
+        matrix:
+            os: [ubuntu-latest, ubuntu-22.04]
+            version: [20, lts/*]
+    runs-on: ${{matrix.os}}
     steps:
         - name: checkout
           uses: actions/checkout@v4
         - name : setup node
           uses: actions/setup-node@v4
           with:
-            node-version: 'lts/*'
+            node-version: ${{matrix.version}}
         - name: run install
           shell: bash
           run: |
