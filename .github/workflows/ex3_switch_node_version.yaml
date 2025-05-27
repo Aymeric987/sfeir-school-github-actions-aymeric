@@ -16,6 +16,7 @@ jobs:
       - name: check node version
         run: |
           npm -v
+          node -v
       - name: run test
         shell: bash
         run: |
