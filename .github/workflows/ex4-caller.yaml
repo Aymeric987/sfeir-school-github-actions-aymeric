@@ -9,4 +9,4 @@ jobs:
   call-reusable-workflow:
     uses: Aymeric987/sfeir-school-github-actions-aymeric/.github/workflows/ex4.yaml@main
     with:
-      node-version: ${env.NODE_VERSION}
+      node-version: ${{env.NODE_VERSION}}
