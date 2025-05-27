@@ -23,6 +23,8 @@ jobs:
   build-docker:
     runs-on: ubuntu-latest
     steps:
+        - name: checkout
+          uses: actions/checkout@v4
         - name: init docker buildx
           uses: docker/setup-buildx-action@v3
 
