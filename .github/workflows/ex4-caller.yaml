@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  run-npm-test:
+  call-reusable-workflow:
     uses: Aymeric987/sfeir-school-github-actions-aymeric/.github/workflows/ex4.yaml@main
     with:
       node-version: "lts/*"
