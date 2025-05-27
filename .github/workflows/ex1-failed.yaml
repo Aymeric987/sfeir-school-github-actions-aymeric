@@ -1,0 +1,23 @@
+name: npm test failed
+on:
+  workflow_dispatch:
+
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: set up node
+        uses: actions/setup-node@v4
+        with:
+          node-version: lts/*
+      - name: run npm install
+        run: npm install
+  job2:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: run npm test
+        run: npm test
