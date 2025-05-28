@@ -9,16 +9,10 @@ inputs:
     description: how the eyes look like ?
     required: true
     default: oo
-  tongue:
-    description: the tongue
-    required: true
-    default: --
 runs:
   using: 'docker'
   image: 'docker://rancher/cowsay:latest'
   args:
     - -e
     - ${{ inputs.eyes }}
-    - T
-    - ${{ inputs.tongue }}
     - ${{ inputs.say }}
