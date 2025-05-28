@@ -4,6 +4,10 @@ inputs:
   text:
     description: text
     required: true
+outputs:
+  upper_text:
+    description: "The UPPER text"
+    value: ${{steps.upper_step.outputs.upper_text}}
 runs:
   using: 'composite'
   steps:
