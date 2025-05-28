@@ -19,3 +19,10 @@ jobs:
         with:
           say: GitHub Action Rocks
           eyes: o-
+
+      - name: custom run with all inputs and tongue
+        uses: ./.github/action/ex1
+        with:
+          say: GitHub Action Rocks
+          eyes: o-
+          tongue: -P
